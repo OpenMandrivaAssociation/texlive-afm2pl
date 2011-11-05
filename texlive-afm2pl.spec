@@ -15,7 +15,8 @@ Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/afm2pl.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/afm2pl.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Requires:	texlive-afm2pl.bin
 Provides:	tetex-afm = %{version}
 Provides:	texlive-afm = %{version}

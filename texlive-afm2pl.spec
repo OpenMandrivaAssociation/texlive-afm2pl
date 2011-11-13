@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-afm2pl
 Version:	20111103
-Release:	1
+Release:	2
 Summary:	TeXLive afm2pl package
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -18,15 +18,8 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-afm2pl.bin
-Provides:	tetex-afm = %{version}
-Provides:	texlive-afm = %{version}
-Provides:	texlive-texmf-afm = %{version}
-Obsoletes:	tetex-afm <= 3.0
-Conflicts:	tetex-afm <= 3.0
-Obsoletes:	texlive-afm <= 2007
-Conflicts:	texlive-afm <= 2007
-Obsoletes:	texlive-texmf-afm <= 2007
-Conflicts:	texlive-texmf-afm <= 2007
+%rename tetex-afm
+%rename texlive-texmf-afm
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 

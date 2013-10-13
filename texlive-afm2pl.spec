@@ -1,11 +1,11 @@
-# revision 26689
+# revision 29752
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-afm2pl
-Version:	20120807
+Version:	20131013
 Release:	1
 Summary:	TeXLive afm2pl package
 Group:		Publishing
@@ -34,24 +34,24 @@ TeXLive afm2pl package.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdir}/fonts/enc/dvips/afm2pl/afm2pl-ot1.enc
-%{_texmfdir}/fonts/enc/dvips/afm2pl/afm2pl-ot1ital.enc
-%{_texmfdir}/fonts/enc/dvips/afm2pl/afm2pl-ot1tt.enc
-%{_texmfdir}/fonts/enc/dvips/afm2pl/afm2pl-texnanlc.enc
-%{_texmfdir}/fonts/enc/dvips/afm2pl/afm2pl-texnanuc.enc
-%{_texmfdir}/fonts/lig/afm2pl/accents.lig
-%{_texmfdir}/fonts/lig/afm2pl/bound.lig
-%{_texmfdir}/fonts/lig/afm2pl/default.lig
-%{_texmfdir}/fonts/lig/afm2pl/defpost.lig
-%{_texmfdir}/fonts/lig/afm2pl/defpre.lig
-%{_texmfdir}/fonts/lig/afm2pl/forge.lig
-%{_texmfdir}/fonts/lig/afm2pl/ligtex.lig
-%{_texmfdir}/tex/fontinst/afm2pl/README
-%{_texmfdir}/tex/fontinst/afm2pl/ly1.etx
-%{_texmfdir}/tex/fontinst/afm2pl/ly1c.etx
-%{_texmfdir}/tex/fontinst/afm2pl/makesc8y.tex
+%{_texmfdistdir}/fonts/enc/dvips/afm2pl/afm2pl-ot1.enc
+%{_texmfdistdir}/fonts/enc/dvips/afm2pl/afm2pl-ot1ital.enc
+%{_texmfdistdir}/fonts/enc/dvips/afm2pl/afm2pl-ot1tt.enc
+%{_texmfdistdir}/fonts/enc/dvips/afm2pl/afm2pl-texnanlc.enc
+%{_texmfdistdir}/fonts/enc/dvips/afm2pl/afm2pl-texnanuc.enc
+%{_texmfdistdir}/fonts/lig/afm2pl/accents.lig
+%{_texmfdistdir}/fonts/lig/afm2pl/bound.lig
+%{_texmfdistdir}/fonts/lig/afm2pl/default.lig
+%{_texmfdistdir}/fonts/lig/afm2pl/defpost.lig
+%{_texmfdistdir}/fonts/lig/afm2pl/defpre.lig
+%{_texmfdistdir}/fonts/lig/afm2pl/forge.lig
+%{_texmfdistdir}/fonts/lig/afm2pl/ligtex.lig
+%{_texmfdistdir}/tex/fontinst/afm2pl/README
+%{_texmfdistdir}/tex/fontinst/afm2pl/ly1.etx
+%{_texmfdistdir}/tex/fontinst/afm2pl/ly1c.etx
+%{_texmfdistdir}/tex/fontinst/afm2pl/makesc8y.tex
 %doc %{_mandir}/man1/afm2pl.1*
-%doc %{_texmfdir}/doc/man/man1/afm2pl.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/afm2pl.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,30 +61,6 @@ TeXLive afm2pl package.
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120807-1
-+ Revision: 811954
-- Update to latest release.
-
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111103-3
-+ Revision: 749098
-- Rebuild to reduce used resources
-
-* Sun Nov 13 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111103-2
-+ Revision: 730336
-- Use rename macro instead of mix of provides/conflicts/obsoletes
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111103-1
-+ Revision: 717802
-- texlive-afm2pl
-- texlive-afm2pl
-- texlive-afm2pl
-- texlive-afm2pl
-- texlive-afm2pl
-- texlive-afm2pl
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1

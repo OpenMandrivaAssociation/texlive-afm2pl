@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-afm2pl
 Version:	20131013
-Release:	4
+Release:	5
 Summary:	TeXLive afm2pl package
 Group:		Publishing
 URL:		http://tug.org/texlive

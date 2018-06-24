@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-afm2pl
-Version:	20171031
+Version:	20180331
 Release:	1
 Summary:	TeXLive afm2pl package
 Group:		Publishing

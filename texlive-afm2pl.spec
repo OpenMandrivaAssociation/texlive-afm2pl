@@ -1,18 +1,12 @@
-# revision 33736
-# category TLCore
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-afm2pl
-Version:	20190327
+Version:	54074
 Release:	1
 Summary:	TeXLive afm2pl package
 Group:		Publishing
 URL:		http://tug.org/texlive
 License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/afm2pl.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/afm2pl.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/afm2pl.r54074.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/afm2pl.doc.r54074.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ Requires:	texlive-afm2pl.bin
 TeXLive afm2pl package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -55,7 +49,7 @@ TeXLive afm2pl package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 

@@ -1,6 +1,6 @@
 Name:		texlive-afm2pl
 Version:	54074
-Release:	1
+Release:	2
 Summary:	TeXLive afm2pl package
 Group:		Publishing
 URL:		http://tug.org/texlive

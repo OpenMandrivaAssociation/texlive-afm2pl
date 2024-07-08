@@ -1,5 +1,5 @@
 Name:		texlive-afm2pl
-Version:	66186
+Version:	71515
 Release:	1
 Summary:	TeXLive afm2pl package
 Group:		Publishing
